@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Switch_2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		// TODO Auto-generated method stub
 		Scanner s = new Scanner(System.in);
 		System.out.print("점수 입력 : ");
