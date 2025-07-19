@@ -15,8 +15,8 @@ public class UpAndDown {
 		int random = ran.nextInt(100) + 1;
 		int count = 0;
 
-		int updown = 123;
-
+		int updown = 123123123;
+		int pre_number = 123123123;
 		while (true) {
 			System.out.print("숫자 입력 : ");
 			int answer = s.nextInt();
@@ -31,16 +31,18 @@ public class UpAndDown {
 //				System.out.println("범위는 1~100 사이입니다 다시입력하세요");
 //				continue;
 //			}
-			count++;
+			
 			if (random > answer) {
-				if (updown == 1) {
-					System.out.println("바보야 방금 Up이라고 했자나... 왜 Down을 하니 다시 해 카운트는 한다");
+				if (updown == 1 && pre_number>answer) {
+					System.out.println("바보야 방금 Up이라고 했자나... 왜 Down을 하니 다시 해 카운트는 안 한다");
+					continue;
 				}
 				System.out.println("Up");
 				updown = 1;
 			} else if (random < answer) {
-				if (updown == 0) {
-					System.out.println("바보야 아까 Down이라고 했자나... 왜 Up을 하니 다시 해 카운트는 한다");
+				if (updown == 0 && pre_number<answer) {
+					System.out.println("바보야 아까 Down이라고 했자나... 왜 Up을 하니 다시 해 카운트는 안 한다");
+					continue;
 				}
 				System.out.println("Down");
 				updown = 0;
@@ -48,6 +50,8 @@ public class UpAndDown {
 				System.out.println("정답입니다!");
 				break;
 			}
+			++count;
+			pre_number = answer;
 		}
 
 		System.out.println(count + "번 만에 맞추셨습니다.");
