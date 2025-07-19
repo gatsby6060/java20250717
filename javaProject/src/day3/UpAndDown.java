@@ -16,7 +16,7 @@ public class UpAndDown {
 		int count = 0;
 
 		int updown = 123123123;
-		int pre_number = 123123123; 
+		int pre_number = 123123123;  
 		while (true) {
 			System.out.print("숫자 입력 : ");
 			int answer = s.nextInt();
