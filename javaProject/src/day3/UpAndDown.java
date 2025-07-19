@@ -31,7 +31,7 @@ public class UpAndDown {
 //				System.out.println("범위는 1~100 사이입니다 다시입력하세요");
 //				continue;
 //			}
-			
+			 
 			if (random > answer) {
 				if (updown == 1 && pre_number>answer) {
 					System.out.println("바보야 방금 Up이라고 했자나... 왜 Down을 하니 다시 해 카운트는 안 한다");
