@@ -45,7 +45,7 @@ public class UpAndDown_jghtest {
 					continue;
 				}
 				System.out.println("Down"); 
-				updown = 0;
+				updown = 0; 
 			} else {
 				System.out.println("정답입니다!");
 				break;
