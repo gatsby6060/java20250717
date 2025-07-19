@@ -30,7 +30,7 @@ public class UpAndDown {
 //			if (answer > 100 || answer < 1) {
 //				System.out.println("범위는 1~100 사이입니다 다시입력하세요");
 //				continue;
-//			}
+//			} 
 			 
 			if (random > answer) {
 				if (updown == 1 && pre_number>answer) {
