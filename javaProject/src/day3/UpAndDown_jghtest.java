@@ -44,7 +44,7 @@ public class UpAndDown_jghtest {
 					System.out.println("바보야 아까 Down이라고 했자나... 왜 Up을 하니 다시 해 카운트는 안 한다");
 					continue;
 				}
-				System.out.println("Down");
+				System.out.println("Down"); 
 				updown = 0;
 			} else {
 				System.out.println("정답입니다!");
