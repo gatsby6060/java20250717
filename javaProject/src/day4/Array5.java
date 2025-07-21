@@ -48,7 +48,8 @@ public class Array5 {
 			for(int j=0; j<i; j++) {
 				if(arr[j] == arr[i]) {
 					i--;
-					break;
+					break; //더이상 뒤에 비교할일이 없어서 for문 그냥 완전탈출용
+					// 위 break가 없어도 정상동작은함 다만 뒤에도 비교하는것뿐
 				}
 			}
 		}
