@@ -1,5 +1,7 @@
 package day5;
 
+import java.util.Random;
+
 public class CalcMain {
 
 	public static void main(String[] args) {
@@ -18,7 +20,12 @@ public class CalcMain {
 		
 		int arr[] = {3,5,1,4,2};
 		int arrSum = calc.arrSum(arr);
-		System.out.println(arrSum);
+//		System.out.println(arrSum);
+		
+//		Random ran = new Random();
+		
+		
+		calc.intro2("홍길동", 30, 170.9);
 	}
 
 }
