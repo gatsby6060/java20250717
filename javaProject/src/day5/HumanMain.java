@@ -6,6 +6,7 @@ public class HumanMain {
 		// TODO Auto-generated method stub
 		Human hong = new Human();
 		hong.name = "홍길동";
+		hong.age = 30;
 		hong.eat();
 		System.out.println(hong.name);
 		
