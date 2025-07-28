@@ -1,5 +1,7 @@
 package hometest250728;
 
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 //사용자로부터 정수를 입력받아 3의 배수인지, 5의 배수인지, 둘 다인지 판별하여 출력하시오.
@@ -69,9 +71,6 @@ public class Test1 {
 //		}
 //	}
 
-	
-	
-	
 	// 사용자로부터 정수를 입력받아 1부터 해당 숫자까지의 합을 출력하시오.
 	// (예: 5 → 1+2+3+4+5 = 15)
 	//
@@ -85,19 +84,87 @@ public class Test1 {
 //		}
 //		System.out.println(sum);
 //	}
-	
-	
-	
-	//Scanner를 통해 정수를 하나 입력받고 해당 숫자의 팩토리얼을 출력하시오.
-	//(예: 5 → 5! = 120)
-	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		int a = s.nextInt();
-		int muti = 1;
-		for(int i = a; i>=1; i--) {
-			muti = muti * i;
-		}
-		System.out.println(muti);
-	}
 
+	// Scanner를 통해 정수를 하나 입력받고 해당 숫자의 팩토리얼을 출력하시오.
+	// (예: 5 → 5! = 120)
+//	public static void main(String[] args) {
+//		System.out.println("정수를 하나 입력받고 해당 숫자의 팩토리얼을 출력예정");
+//		Scanner s = new Scanner(System.in);
+//		int a = s.nextInt();
+//		int muti = 1;
+//		for(int i = a; i>=1; i--) {
+//			muti = muti * i;
+//		}
+//		System.out.println(muti);
+//	}
+
+	// Scanner를 통해 나이를 입력받고, 미성년자(18세 미만)인지 아닌지 판별하시오.
+	//
+	// 18세 이상이면 "성인입니다", 그렇지 않으면 "미성년자입니다" 출력
+//	public static void main(String[] args) {
+//		System.out.println("Scanner를 통해 나이를 입력받고, 미성년자(18세 미만)인지 아닌지 판별");
+//		Scanner s = new Scanner(System.in);
+//		int a = s.nextInt();
+//		if(a >= 18) {
+//			System.out.println("성인입니다.");
+//		}else {
+//			System.out.println("미성년자입니다.");
+//		}
+//	}
+
+	//
+	// 정수형 배열 {4, 9, 1, 6, 13, 2} 에서 홀수만 출력하시오.
+	//
+//	public static void main(String[] args) {
+//		
+//		int[] a  = {4, 9, 1, 6, 13, 2};
+//		for(int i=0; i < 6; i++) {
+//			if(a[i]%2 != 0){
+//				System.out.println(a[i]);
+//			}
+//		}
+//	}
+
+	//
+	// 정수형 배열 {3, 5, 7, 2, 8, 1} 에서 가장 작은 수와 가장 큰 수를 찾아 출력하시오.
+	//
+//	public static void main(String[] args) {
+//		
+//		int bigIndex = 0;
+//		int smallIndex = 0;
+//		int[] a = { 3, 5, 7, 2, 8, 1 };
+//		for (int i = 0; i < 5; i++) {
+//			if (a[i] > a[i + 1]) {
+//				bigIndex = i;
+//			}else {
+//				bigIndex = i+1;
+//			}
+//			
+//			if (a[i] < a[i + 1]) {
+//				smallIndex = i;
+//			}else {
+//				smallIndex = i+1;
+//			}
+//		}
+//		int bigNumber= a[bigIndex];
+//		int smallNumber= a[smallIndex];
+//		
+//		System.out.println("제일 작은수 " + smallNumber);
+//		System.out.println("제일 큰수 " + bigNumber);
+//		
+//	}
+
+	
+	//크기 10의 정수 배열을 선언하고, 1부터 100까지의 난수를 넣은 후 짝수만 출력하시오.
+//	public static void main(String[] args) {
+//		int[] a = new int[10];
+//		Random ran = new Random();
+//		for(int i =0 ; i<10 ; i++) {
+//			a[i] = ran.nextInt(100)+1;
+//			if(a[i]%2 == 0) {
+//				System.out.println(a[i]);
+//			}
+//		}
+//	}
+	
 }
