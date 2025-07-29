@@ -12,7 +12,7 @@ public class If2 {
 		// 사용자로부터 입력받은 숫자가 배열에 존재하면 "맞췃다!"
 		// 없으면 "틀렸다" 출력
 
-		boolean flg = false;
+		
 
 		int arr[] = new int[5];
 		Random ran = new Random();
@@ -23,17 +23,22 @@ public class If2 {
 
 		System.out.println("숫자를 입력하세요");
 		Scanner s = new Scanner(System.in);
-		int a = s.nextInt();
+		
+		int input = s.nextInt();
 
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] == a) {
+		boolean flg = false;
+		
+		for(int num : arr) { // 값을 모두 비교하고 싶을때
+			if (input == num) {
 				flg = true;
+				break;
 			}
 		}
-		if (flg == true) {
-			System.out.println("맞췃다");
+		
+		if (flg) { //flg == true
+			System.out.println("맞췃다!");
 		} else {
-			System.out.println("틀렸다.");
+			System.out.println("틀렸다!");
 		}
 
 	}
