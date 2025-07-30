@@ -64,15 +64,14 @@ public class Array6 {
 				arr3[i][j] = ran.nextInt(51)+10;
 			}
 		}
-//		System.out.println(Arrays.toString(arr3[0]));
-//		System.out.println(Arrays.toString(arr3[1]));
-//		System.out.println(Arrays.toString(arr3[2]));
-//		System.out.println(Arrays.toString(arr3[3]));
-		System.out.println();
-		for(int i = 0; i<arr3.length; i++) {
-			System.out.println(Arrays.toString(arr3[i]));
-		}
-		
+		System.out.println(Arrays.toString(arr3[0]));
+		System.out.println(Arrays.toString(arr3[1]));
+		System.out.println(Arrays.toString(arr3[2]));
+		System.out.println(Arrays.toString(arr3[3]));
+//		for(int i = 0; i<arr.length; i++) {
+//			System.out.println(arr[i]);
+//		}
+//		
 	
 	
 	}
