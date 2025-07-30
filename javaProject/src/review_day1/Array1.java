@@ -24,19 +24,27 @@ public class Array1 {
 		int sum = 0;
 		int mid = 0;
 
-		for (int value : scoreArr) {
-			sum += value;
+		for (int score : scoreArr) {
+			sum += score;
 		}
-		mid = sum / scoreArr.length;
-		System.out.println("평균은:" + mid);
+		double avg = (double)sum / scoreArr.length;
+//		System.out.println("평균은:" + avg);
 
 		System.out.print("평균이 넘는 과목은");
 		for (int i = 0; i < scoreArr.length; i++) {
-			if (scoreArr[i] > mid) {
-				System.out.print(" " + subjectArr[i]);
+			if (scoreArr[i] > avg) {
+				System.out.print(subjectArr[i] + " ");
 			}
 		}
 		System.out.println("입니다");
+		
+		String subStr = "";
+		for(int i = 0; i<scoreArr.length; i++) {
+			if(scoreArr[i]>avg) {
+				subStr += subjectArr[i] + " ";
+			}
+		}
+		System.out.println("평균이 넘는 과목은 " + subStr + "입니다");
 	}
 
 }
