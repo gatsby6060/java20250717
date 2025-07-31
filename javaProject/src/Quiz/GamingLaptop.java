@@ -13,6 +13,6 @@ public class GamingLaptop extends Laptop {
 	
 	public void printSpecs(){
 		System.out.println(super.getBrand()+"브랜드의 "+super.getWeight()+"kg " 
-					+ this.graphicsCard +"게이밍 노트북");
+					+ this.graphicsCard +" 게이밍 노트북");
 	}
 }
