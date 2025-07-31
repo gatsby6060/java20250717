@@ -4,6 +4,12 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class ArrayFunc {
+	
+	public static final int EVEN = 0;
+	public static final int ODD = 1;
+	
+	// 객체생성 불가능하도록 생성자를 private로 선언
+	private ArrayFunc() {}
 
 	// 배열의 모든 값을 음수로 만드는 메소드
 	// parameter1 : 정수형 배열
@@ -207,6 +213,29 @@ public class ArrayFunc {
 		Arrays.sort(arr);
 		minusArr(arr);
 	}
+	
+	
+	//배열에서 홀수 짝수의 개수를 리턴해주는 메소드
+	//parameter1: 정수형 배열
+	//parameter2: 홀수 작수 구분 문자열 odd or even
+	//** kind에 0, 1외 값에 대한 예외처리 필요 **
+	public static int arrLength(int[] arra, int kind) {
+		int size = 0;
+		int num = kind;
+		for (int i = 0; i < arra.length; i++) {
+			if (arra[i] % 2 == num) {
+				size++;
+			}
+		}
+		return size;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 
 }
