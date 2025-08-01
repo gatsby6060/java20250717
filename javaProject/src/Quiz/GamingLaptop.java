@@ -2,17 +2,19 @@ package Quiz;
 
 public class GamingLaptop extends Laptop {
 
-
-	private String graphicsCard; 
-
-	public GamingLaptop(String brand, double weight, String graphicsCard) {
+//	private String graphic; 
+	String  graphic;
+	
+	public GamingLaptop(String brand, double weight, String graphic) {
 		// TODO Auto-generated constructor stub
 		super(brand, weight);
-		this.graphicsCard =graphicsCard;
+		this.graphic =graphic;
 	}
 	
+	@Override
 	public void printSpecs(){
-		System.out.println(super.getBrand()+"브랜드의 "+super.getWeight()+"kg " 
-					+ this.graphicsCard +" 게이밍 노트북");
+		System.out.print(super.getBrand()+"브랜드의 "+super.getWeight()+"kg ");
+		System.out.println(this.graphic +" 게이밍 노트북");
+				
 	}
 }
