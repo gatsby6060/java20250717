@@ -31,6 +31,7 @@ public class ArrayListEx1 {
 		strList.add("홍길동");
 		strList.add("김철수");
 		strList.add("박영희");
+		System.out.println(strList);
 		
 		ArrayList<Object> objList = new ArrayList<>();
 		objList.add(1);
