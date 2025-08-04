@@ -47,12 +47,7 @@ public class QuizEx1 {
 						i--; // 인덱스가 하나씩 앞으로 당겨져서 다시 확인하려고 --를 해준다.
 						System.out.println("삭제 되었습니다.");
 					} 
-//					else {
-//						count++;
-//						if (count == list.size()) {
-//							System.out.println("해당 이름을 가진 사용자가 존재하지 않습니다.");
-//						}
-//					}
+
 					if(!searchFlg) {
 						System.out.println("해당 이름을 가진 사용자가 존재하지 않습니다.");
 					}
@@ -68,7 +63,7 @@ public class QuizEx1 {
 			else {
 				System.out.println("1~4중에 선택해 주세요.");
 			}
-			System.out.println("------------------------------");
+			System.out.println("----------------------------------");
 		}
 
 	}
