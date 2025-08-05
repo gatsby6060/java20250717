@@ -6,6 +6,35 @@ import java.util.Scanner;
 
 public class FruitMarket {
 
+	
+	public static int checkNumber(String msg) { // 메시지가 가격일때 는 100단위도 검증?
+		Scanner s = new Scanner(System.in);
+		int input;
+		while(true) {
+			System.out.println(msg + " : ");
+			input = s.nextInt();
+			
+			//가격 100단위 인지 체크 하는 조건문
+			if(msg.equals("가격")) {
+				if(input % 100 != 0) {
+					System.out.println("가격은 100단위로 입력해주세요 : ");
+					continue;
+				}
+			}
+			
+			if(input <= 0) {
+				System.out.println("음수는 불가능합니다. 다시 입력해주세요.");
+			}else {
+				break;
+			}
+		}
+		
+		return input;
+	}
+
+	
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// * 과일가게 프로그램 *
@@ -21,11 +50,11 @@ public class FruitMarket {
 
 		Scanner s = new Scanner(System.in);
 		ArrayList<HashMap<String, Object>> list = new ArrayList<>();
-		System.out.println("==== 과일가게 ====");
+		System.out.println("===== 과일가게 프로그램 =====");
 
 		while (true) {
 			System.out.println();
-			System.out.print("[   (1) 추가  (2)확인  (3) 판매  (4)가격변경  (-1)종료   ] : ");
+			System.out.print("[  (1) 추가  (2)확인  (3) 판매  (4)가격변경  (-1)종료  ] : ");
 			int menu = s.nextInt();
 
 			if (menu == 1) {
@@ -48,7 +77,7 @@ public class FruitMarket {
 						System.out.println("개수 추가완료!");
 						flg = true;
 					}
-					
+
 				}
 				if (!flg) {
 					flg = false;
@@ -56,6 +85,7 @@ public class FruitMarket {
 
 					System.out.print("가격 : ");
 					int price = s.nextInt();
+//					fruit.put("price", checkNumber("가격")) ;
 					if (price < 0) {
 						System.out.println("음수입력 불가");
 						continue;
@@ -67,6 +97,7 @@ public class FruitMarket {
 
 					System.out.print("개수 : ");
 					int count = s.nextInt();
+//					fruit.put("count", checkNumber("개수")) ;
 					if (count < 0) {
 						System.out.println("음수입력 불가");
 						continue;
@@ -75,7 +106,7 @@ public class FruitMarket {
 
 					list.add(fruit);
 				}
-				
+
 			} else if (menu == 2) {
 
 				System.out.print("검색할 과일명 : ");
@@ -104,24 +135,24 @@ public class FruitMarket {
 					if (fruitName.equals(list.get(i).get("fruitName"))) {// 이렇게 해도 상관없음 (이경우는)
 						searchFlg = true;
 						System.out.print("판매할 개수 : ");
+//						fruit.put("count", checkNumber("개수")) ;
 						int sellCount = s.nextInt();
 						if ((int) list.get(i).get("count") - sellCount < 0) {
 							System.out.println("판매 가능한 개수는 " + (int) list.get(i).get("count") + "개 입니다");
 							break;
 						};
-						
+
 						list.get(i).put("count", (int) list.get(i).get("count") - sellCount);
 
 					}
 				}
-				
+
 				if (!searchFlg) { // search == false
 					System.out.println("해당 과일이 존재하지 않습니다.");
 				}
 
 			}
 
-			
 			else if (menu == 4) {
 
 				System.out.print("가격을 수정할 과일명 : ");
@@ -147,15 +178,12 @@ public class FruitMarket {
 			else if (menu == -1) {
 				System.out.println("종료되었습니다.");
 				break;
-			} 
-			
+			}
+
 			else {
 
 			}
 
-			
-			
-			
 		}
 
 	}
